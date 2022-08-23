@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  topic_query:
+    container_name: topic-query
+    build:
+      context: .
+      target: dev
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app/:/app/
+    env_file:
+      - ./conf/app-env-dev
+    command: python manage.py runserver 0.0.0.0:8000

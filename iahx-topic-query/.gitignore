@@ -1,0 +1,8 @@
+*.pot
+*.pyc
+*.sh
+database.db
+.vscode/
+.env*
+conf/app-env*
+static_files/
