@@ -11,3 +11,5 @@ class TopicQuery(models.Model):
     topic_id = models.CharField("ID do tópico", max_length=75, blank=False)
     query_url = models.URLField("URL para estratégia de busca", blank=False)
 
+    def __str__(self):
+        return "{} | {} | {}".format(self.instance_id, self.filter_id, self.topic_id)
